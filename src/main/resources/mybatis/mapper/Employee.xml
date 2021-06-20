@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.duan.mapper.EmployeeMapper">
+  <select id="queryEmployeeList" resultType="Employee">
+    select *from  staff_management.employee
+  </select>
+  <select id="queryEmployeeById" resultType="Employee">
+    select *from staff_management.employee where id =#{id}
+  </select>
+  <insert id="addEmployee" parameterType="Employee">
+    insert into staff_management.employee (Nm, email, gender, Dname) values (#{Nm},#{email},#{gender},#{Dname})
+  </insert>
+  <update id="updateEmployee" parameterType="Employee">
+    update staff_management.employee set Nm=#{Nm},email=#{email},gender=#{gender},Dno=#{Dno},Dname=#{Dame} where Id =#{Id}
+  </update>
+  <delete id="deleteEmployee" parameterType="int">
+    delete from staff_management.employee where Id =#{id}
+  </delete>
+
+</mapper>

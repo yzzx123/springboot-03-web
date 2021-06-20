@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.duan.mapper.DepartmentMapper">
+    <select id="queryDepartmentList" resultType="Department">
+    select *from staff_management.department
+  </select>
+    <select id="queryDepartmentById" resultType="Department">
+    select *from staff_management.department where Dno =#{Dno}
+  </select>
+    <insert id="addDepartment" parameterType="Department">
+    insert into staff_management.department(Dno, Dname) values (#{Dno},#{Dname})
+  </insert>
+    <update id="updateDepartment" parameterType="Department">
+    update staff_management.department set Dno=#{Dno},Dname=#{Dname} where Dno =#{Dno}
+  </update>
+    <delete id="deleteDepartment" parameterType="int">
+    delete from staff_management.department where Dno =#{Dno}
+  </delete>
+
+</mapper>
