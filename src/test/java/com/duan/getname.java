@@ -52,11 +52,17 @@ public class getname
         int result=getname.getNmb(-1,-1);
         System.out.println(result);
     }
-}
+
 
 
     @Test
     void test6(){
+        int result=getname.getNmb(-1,-1);
+        System.out.println(result);
+    }
+
+    @Test
+    void test7(){
         int result=getname.getNmb(-1,-1);
         System.out.println(result);
     }
