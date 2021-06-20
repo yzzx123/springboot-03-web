@@ -53,3 +53,11 @@ public class getname
         System.out.println(result);
     }
 }
+
+
+    @Test
+    void test6(){
+        int result=getname.getNmb(-1,-1);
+        System.out.println(result);
+    }
+}
