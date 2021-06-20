@@ -48,7 +48,7 @@ public class getname
                      }
 
     @Test
-    void test5(){
+    void test6(){
         int result=getname.getNmb(-1,-1);
         System.out.println(result);
     }
